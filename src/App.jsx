@@ -10,14 +10,14 @@ function App() {
   const [inputs, setInputs] = useState(INITIAL_STATE);
   const { initialInvestment, annualInvestment, expectedReturn, duration } =
     inputs;
-  let isInputValid
+  let isInputValid;
   if (initialInvestment && annualInvestment && expectedReturn && duration) {
     results = calculateInvestmentResults(inputs);
-    if(duration > 0) isInputValid = true
+    if (duration > 0) isInputValid = true;
   }
   return (
     <>
-      <div id="user-input">
+      <section id="user-input">
         <div className="input-group">
           <Input
             labelName="initial investment"
@@ -42,7 +42,7 @@ function App() {
             onValueChange={setInputs}
           />
         </div>
-      </div>
+      </section>
 
       {isInputValid ? (
         <table id="result" className="center">
@@ -69,7 +69,8 @@ function App() {
           </tbody>
         </table>
       ) : (
-        <p className="center">Please provide Valid Investment details</p>
+        // <p className="center">Please provide Valid Investment details</p>
+        <div className="load-positioner"><div id="loader"></div></div>
       )}
     </>
   );

@@ -14,6 +14,28 @@ body {
   min-height: 100vh;
 }
 
+/*my styles start*/
+#loader {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 5px solid #ddd;
+  border-top-color: #307e6c;
+  animation: rotate 1s infinite;
+}
+
+.load-positioner {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes rotate {
+  100% {
+    rotate: 360deg;
+  }
+}
+/*my styles end*/
+
 #header {
   text-align: center;
   margin: 3rem auto;
