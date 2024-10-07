@@ -27,6 +27,22 @@ body {
 .load-positioner {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.image-container {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.image-container img {
+  height: 100%;
+  mix-blend-mode: screen;
 }
 
 @keyframes rotate {

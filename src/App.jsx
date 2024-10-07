@@ -2,6 +2,7 @@ import Input from "./components/Input";
 import { useState } from "react";
 import { calculateInvestmentResults } from "./util/investment";
 import TableRow from "./components/TableRow";
+import waitingPng from "./assets/waiting-image.png";
 
 const INITIAL_STATE = {};
 let results;
@@ -70,7 +71,11 @@ function App() {
         </table>
       ) : (
         // <p className="center">Please provide Valid Investment details</p>
-        <div className="load-positioner"><div id="loader"></div></div>
+        //<div className="load-positioner"><div id="loader"></div>Waiting for input</div>
+        <div className="image-container">
+          <img src={waitingPng} alt="image"/>
+          <p>Waiting for input</p>
+        </div>
       )}
     </>
   );
